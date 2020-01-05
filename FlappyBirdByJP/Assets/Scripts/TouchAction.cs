@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TouchAction : MonoBehaviour
 {
@@ -45,7 +46,6 @@ public class TouchAction : MonoBehaviour
             {
                 transform.eulerAngles = to;
             }
-            lastPosition = transform.position.y;
         }
 
         if (Input.touchCount > 0) //phone

@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - BackGroundManager
+    - BackManagement
     - BackgroundScroll
     - BestScoreManager
     - BirdManager
@@ -104,37 +105,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9890}
     - Class: 114
-      Script: {instanceID: 10140}
+      Script: {instanceID: 10296}
     - Class: 114
-      Script: {instanceID: 10158}
+      Script: {instanceID: 10318}
     - Class: 114
-      Script: {instanceID: 10302}
+      Script: {instanceID: 10452}
     - Class: 114
-      Script: {instanceID: 10322}
+      Script: {instanceID: 10498}
     - Class: 114
-      Script: {instanceID: 10500}
+      Script: {instanceID: 10598}
     - Class: 114
-      Script: {instanceID: 10600}
+      Script: {instanceID: 10642}
     - Class: 114
-      Script: {instanceID: 10644}
+      Script: {instanceID: 10684}
     - Class: 114
-      Script: {instanceID: 10686}
+      Script: {instanceID: 10978}
     - Class: 114
-      Script: {instanceID: 10980}
+      Script: {instanceID: 11168}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11292}
     - Class: 114
-      Script: {instanceID: 11294}
+      Script: {instanceID: 11542}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 11548}
+      Script: {instanceID: 11596}
     - Class: 114
-      Script: {instanceID: 13434}
+      Script: {instanceID: 11598}
     - Class: 114
-      Script: {instanceID: 19682}
-    - Class: 114
-      Script: {instanceID: 60010}
+      Script: {instanceID: 14276}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -185,25 +184,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9890}
     - Class: 114
-      Script: {instanceID: 10014}
+      Script: {instanceID: 10012}
     - Class: 114
-      Script: {instanceID: 10302}
+      Script: {instanceID: 10296}
     - Class: 114
-      Script: {instanceID: 10554}
+      Script: {instanceID: 10552}
     - Class: 114
-      Script: {instanceID: 10686}
+      Script: {instanceID: 10684}
     - Class: 114
-      Script: {instanceID: 10776}
+      Script: {instanceID: 10774}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11168}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 11542}
     - Class: 114
-      Script: {instanceID: 11562}
+      Script: {instanceID: 11560}
     - Class: 114
-      Script: {instanceID: 11598}
+      Script: {instanceID: 11596}
     - Class: 114
-      Script: {instanceID: 13434}
+      Script: {instanceID: 11600}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -242,17 +241,17 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9936}
+      Script: {instanceID: 9934}
     - Class: 114
-      Script: {instanceID: 10248}
+      Script: {instanceID: 10242}
     - Class: 114
-      Script: {instanceID: 10436}
+      Script: {instanceID: 10306}
     - Class: 114
-      Script: {instanceID: 10904}
+      Script: {instanceID: 10432}
     - Class: 114
-      Script: {instanceID: 13434}
+      Script: {instanceID: 10902}
     - Class: 114
-      Script: {instanceID: 17500}
+      Script: {instanceID: 11596}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -289,17 +288,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9890}
     - Class: 114
-      Script: {instanceID: 10302}
+      Script: {instanceID: 10296}
     - Class: 114
-      Script: {instanceID: 10574}
+      Script: {instanceID: 10572}
     - Class: 114
-      Script: {instanceID: 10686}
+      Script: {instanceID: 10684}
     - Class: 114
-      Script: {instanceID: 11070}
+      Script: {instanceID: 11068}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11168}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 11542}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -346,25 +345,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9890}
     - Class: 114
-      Script: {instanceID: 10020}
+      Script: {instanceID: 10018}
     - Class: 114
-      Script: {instanceID: 10302}
+      Script: {instanceID: 10296}
     - Class: 114
-      Script: {instanceID: 10322}
+      Script: {instanceID: 10318}
     - Class: 114
-      Script: {instanceID: 10686}
+      Script: {instanceID: 10684}
     - Class: 114
-      Script: {instanceID: 10980}
+      Script: {instanceID: 10978}
     - Class: 114
-      Script: {instanceID: 11074}
+      Script: {instanceID: 11072}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11168}
     - Class: 114
-      Script: {instanceID: 11196}
+      Script: {instanceID: 11194}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 11542}
     - Class: 114
-      Script: {instanceID: 11574}
+      Script: {instanceID: 11572}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -600,6 +599,12 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 9b7a7d2a7bd711875c028a85bdbe15f5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackGroundManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -628,6 +633,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameState
+  - hash:
+      serializedVersion: 2
+      Hash: c467e3f0aca5f4dec8de22b0b58ed4e3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FloorScroll
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -930,6 +941,18 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
+      Hash: c467e3f0aca5f4dec8de22b0b58ed4e3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackgroundScroll
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FloorManager
+  - hash:
+      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -942,28 +965,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: c467e3f0aca5f4dec8de22b0b58ed4e3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BackgroundScroll
-  - hash:
-      serializedVersion: 2
-      Hash: 9b7a7d2a7bd711875c028a85bdbe15f5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BackGroundManager
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: FloorManager
-  - hash:
-      serializedVersion: 2
-      Hash: c467e3f0aca5f4dec8de22b0b58ed4e3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FloorScroll
+    className: BackManagement
   platform: 13
   scenePathNames:
   - Assets/Scenes/Scene1-Init.unity
@@ -971,4 +976,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Scene3-Game.unity
   - Assets/Scenes/Scene4-GameOver.unity
   - Assets/Scenes/Scene1_1-Param.unity
-  playerPath: C:/Users/Bonjour/Documents/Cours/M1/S1/unity/TP/flappyBird/flappyBird_8.apk
+  playerPath: C:/Users/Bonjour/Documents/Cours/M1/S1/unity/TP/save/Beta/FlappyBird/FlappyBirdByJeanPacomeDelmas.apk
