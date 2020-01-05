@@ -13,6 +13,10 @@ J'ai également ajouté un menu paramètre.
 
 Il y a 5 scènes: les 4 scenes du TP ainsi qu'une scene pour les paramètres accessible à partir de la toute première scene.
 
+_**D'une manière générale:**_
+
+- 
+
 _**Dans la 1ere scène (Init):**_
 
 - Un background qui scroll composé de 2 Quad (se trouve dans GameObject -> 3DObject).
