@@ -12,6 +12,7 @@ public class SetMedal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //si le score est d'au moins un certain nombre alors on affiche une médaille
         int score = GameState.Instance.getScorePlayer();
         if (score >= 40)
             gameObject.GetComponent<SpriteRenderer>().sprite = platine;

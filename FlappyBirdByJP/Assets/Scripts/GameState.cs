@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GameState : MonoBehaviour
 {
+    //singleton
     public static GameState Instance;
 
     private static int scorePlayer;
@@ -30,18 +31,21 @@ public class GameState : MonoBehaviour
 
     void Awake()
     {
+        //on instancie le singleton
         if (Instance == null)
         {
             Instance = this;
             bestScorePlayer = 0;
             bestScorePlayer = PlayerPrefs.GetInt("bestScore");
         }
+        //on le detruit et on la met à jour
         else if (SceneManager.GetActiveScene().name.Equals("Scene2-Menu"))
         {
             bestScorePlayer = Instance.getBestScorePlayer();
             Destroy(Instance.gameObject);
             Instance = this;
         }
+        //on le detruit
         else if (Instance != this)
         {
             Destroy(gameObject);
@@ -66,6 +70,7 @@ public class GameState : MonoBehaviour
     {
         if (!isDead)
         {
+            //placement des différents scores à la bonne place pour que le score que l'utilisateur voit soit toujours centré
             string score = scorePlayer.ToString();
             if (score.Length == 1)
             {
@@ -89,6 +94,7 @@ public class GameState : MonoBehaviour
                 GameObject.FindWithTag("score3").transform.position = new Vector3(-0.15f, posY, 0);
                 GameObject.FindWithTag("score4").transform.position = new Vector3(-0.45f, posY, 0);
             }
+            //met les bons sprites dans chaque score
             int indice = score.Length;
             for (int i = 0; i < score.Length; i++)
             {
@@ -130,6 +136,7 @@ public class GameState : MonoBehaviour
         }
     }
 
+    //met à jour ou pas le meilleur score
     public void UpdateBestScorePlayer()
     {
         if (scorePlayer > bestScorePlayer)
@@ -140,11 +147,13 @@ public class GameState : MonoBehaviour
         }
     }
 
+    //incrémente le score
     public void addScorePlayer(int toAdd)
     {
         scorePlayer += toAdd;
     }
 
+    //getters et setters
     public void setIsDead(bool b)
     {
         isDead = b;

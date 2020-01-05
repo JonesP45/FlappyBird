@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class BackManagement : MonoBehaviour
 {
+    //singleton
     public static BackManagement Instance;
 
     void Awake()
     {
+        //instancie le singleton
         if (Instance == null)
         {
             Instance = this;
@@ -17,8 +19,10 @@ public class BackManagement : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        //pour ne pas le détruire quand on charge une scène
         DontDestroyOnLoad(Instance);
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +32,7 @@ public class BackManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If the application run in Android
         if (Application.platform == RuntimePlatform.Android)
         {
             // Check if Back was pressed this frame
@@ -40,6 +45,7 @@ public class BackManagement : MonoBehaviour
                 }
                 else
                 {
+                    // Load the first scene
                     SceneManager.LoadScene("Scene1-Init");
                     GameObject.FindGameObjectWithTag("floor").GetComponent<FloorScroll>().enabled = true;
                 }

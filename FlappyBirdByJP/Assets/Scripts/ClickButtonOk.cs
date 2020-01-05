@@ -7,6 +7,7 @@ public class ClickButtonOk : MonoBehaviour
 {
     public void onClick()
     {
+        //on charge la scene des initiale
         SceneManager.LoadScene("Scene1-Init");
     }
 }

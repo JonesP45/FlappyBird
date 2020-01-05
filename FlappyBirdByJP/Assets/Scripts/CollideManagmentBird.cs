@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CollideManagmentBird : MonoBehaviour
 {
+    //si le bird touche une box, on met à jour le score
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.name.Equals("Box1") || col.gameObject.name.Equals("Box2"))

@@ -12,6 +12,7 @@ public class ClickButtonPausePlay : MonoBehaviour
 
     public void onClick()
     {
+        //si le jeu est en pause, on le remet en route
         if (isPaused)
         {
             GameState.Instance.setIsPause(false);
@@ -19,6 +20,7 @@ public class ClickButtonPausePlay : MonoBehaviour
             isPaused = false;
             gameObject.GetComponent<Image>().sprite = pause;
         }
+        //sinon on le met en pause
         else
         {
             GameState.Instance.setIsPause(true);

@@ -10,14 +10,21 @@ public class EndAction : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        //si le bird touche un pipe
         if (col.gameObject.name == "UpPipe" || col.gameObject.name == "DownPipe")
         {
+            //on met à jour son état dans GameState
             GameState.Instance.setIsDead(true);
+            //on désactive le script touchaction pour qu'il ne puisse plus sauter
             gameObject.GetComponent<TouchAction>().enabled = false;
+            //on remet sa rotation à 0
             transform.eulerAngles = new Vector3(0, 0, 0);
+            //puis on desactive applyrootmotion de l'animator pour pouvoir appliquer le trigger Die normalement
             gameObject.GetComponentInChildren<Animator>().applyRootMotion = false;
             gameObject.GetComponentInChildren<Animator>().SetTrigger("Die");
+            //on arrete le mouvement du background, du floor et des pipes
             StopMoving();
+            //on joue les sons
             if (!isDie)
             {
                 playSoundHit();
@@ -25,6 +32,7 @@ public class EndAction : MonoBehaviour
             }
             isDie = true;
         }
+        //si le bird touche le sol
         else if (col.gameObject.name.Contains("Floor"))
         {
             GameState.Instance.setIsDead(true);
@@ -44,6 +52,7 @@ public class EndAction : MonoBehaviour
 
     void StopMoving()
     {
+        ButtonPausePlayManager.Instance.Delete();
         GameObject[] pipes = GameObject.FindGameObjectsWithTag("pipe");
         foreach (GameObject pipe in pipes)
         {
@@ -53,9 +62,9 @@ public class EndAction : MonoBehaviour
         GameObject.FindWithTag("background").GetComponent<BackgroundScroll>().enabled = false;
         GameObject.FindWithTag("floor").GetComponent<FloorScroll>().enabled = false;
 
+        //on met à jour le meilleur score et on charge la scene 4
         if (!gameOver)
         {
-            //GameState.Instance.setIsDead(true);
             GameState.Instance.UpdateBestScorePlayer();
             gameOver = true;
             SceneManager.LoadScene("Scene4-GameOver", LoadSceneMode.Additive);

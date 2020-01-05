@@ -22,6 +22,7 @@ public class MovePipes : MonoBehaviour
 
     void Awake()
     {
+        //en fonction de la difficulté de ParamManager, on met 1 ou 2 paire de pipes
         if (gameObject.name.Contains("2"))
         {
             if (ParamManager.Instance.difficulty.Equals(ParamManager.Normal) || ParamManager.Instance.difficulty.Equals(ParamManager.Hard))
@@ -33,6 +34,8 @@ public class MovePipes : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
+
+        //la même vitesse que le floor
         movement = new Vector3(-2 * GameObject.FindWithTag("floor").GetComponent<FloorScroll>().xVelocity, 0, 0);
     }
 
@@ -45,6 +48,7 @@ public class MovePipes : MonoBehaviour
         leftBottomCameraBorder = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
         rightBottomCameraBorder = Camera.main.ViewportToWorldPoint(new Vector2(1, 0));
 
+        //on choisi les pipes en fonction du background
         if (!GameObject.FindWithTag("background").GetComponent<BackGroundManager>().quad.GetComponent<Renderer>().material.name.Contains("2"))
         {
             pipeUp.GetComponent<SpriteRenderer>().sprite = UpDay;

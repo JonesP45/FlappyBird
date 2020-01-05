@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BackGroundManager : MonoBehaviour
 {
+    //singleton
     public static BackGroundManager Instance;
 
     public GameObject quad;
@@ -14,15 +15,18 @@ public class BackGroundManager : MonoBehaviour
 
     void Awake()
     {
+        //instancie le singleton
         if (Instance == null)
         {
             Instance = this;
         }
+        //detruit et met à jour le singleton
         else if (SceneManager.GetActiveScene().name.Equals("Scene2-Menu"))
         {
             Destroy(Instance.gameObject);
             Instance = this;
         }
+        //detruit le singleton
         else if (Instance != this)
         {
             Destroy(gameObject);
@@ -33,20 +37,7 @@ public class BackGroundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetBackgrounds();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (SceneManager.GetActiveScene().name.Equals("Scene1-Init"))
-        {
-            Destroy(Instance.gameObject);
-        }
-    }
-
-    void SetBackgrounds()
-    {
+        //choisi un background aléatoirement 
         int alea = Random.Range(0, 2);
         if (alea == 0)
         {
@@ -58,11 +49,22 @@ public class BackGroundManager : MonoBehaviour
         }
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name.Equals("Scene1-Init"))
+        {
+            Destroy(Instance.gameObject);
+        }
+    }
+
+    //intancie le background "jour"
     void StartBackGroundDay()
     {
         quad.GetComponent<Renderer>().material = bkDay;
     }
 
+    //intancie le background "nuit"
     void StartBackGroundNight()
     {
         quad.GetComponent<Renderer>().material = bkNight;

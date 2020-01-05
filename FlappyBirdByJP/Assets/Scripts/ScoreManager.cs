@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
+    //singleton
     public static ScoreManager Instance;
 
-    public GameObject score1;
-    public GameObject score2;
-    public GameObject score3;
-    public GameObject score4;
+    public GameObject score1; //score des unités
+    public GameObject score2; //score des dizaines
+    public GameObject score3; //score des centaines
+    public GameObject score4; //score des milliers
 
+    //les différents sprites des chiffres
     public Sprite zero;
     public Sprite un;
     public Sprite deux;
@@ -25,15 +27,18 @@ public class ScoreManager : MonoBehaviour
 
     void Awake()
     {
+        //on instancie le singleton
         if (Instance == null)
         {
             Instance = this;
         }
+        //on le detruit et on le met à jour
         else if (SceneManager.GetActiveScene().name.Equals("Scene2-Menu"))
         {
             Destroy(Instance.gameObject);
             Instance = this;
         }
+        //on le detruit
         else if (Instance != this)
         {
             Destroy(gameObject);
@@ -44,6 +49,7 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //met les bons sprites dans chaque score
         string score = GameState.Instance.getScorePlayer().ToString();
         int indice = score.Length;
         for (int i = 0; i < score.Length; i++)
@@ -83,6 +89,7 @@ public class ScoreManager : MonoBehaviour
             }
             indice--;
         }
+        //pas de sprites si pas de milliers par exemple
         for (int i = score.Length; i < 4; i++)
         {
             getGoodScore(i + 1).GetComponent<SpriteRenderer>().sprite = null;
@@ -98,6 +105,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    //retourne le gameObject score approprié
     GameObject getGoodScore(int i)
     {
         if (score1.name.Equals("Score" + i))

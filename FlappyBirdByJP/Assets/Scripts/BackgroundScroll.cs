@@ -19,6 +19,7 @@ public class BackgroundScroll : MonoBehaviour
     void Update()
     {
         material = GetComponent<Renderer>().material;
+        // applique un offset variable au material, se qui fait scroll le background
         material.mainTextureOffset += offset * (Time.deltaTime / 3);
     }
 }

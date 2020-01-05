@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ParamManager : MonoBehaviour
 {
+    //singleton
     public static ParamManager Instance;
 
     private GameObject bird;
@@ -18,10 +19,12 @@ public class ParamManager : MonoBehaviour
 
     void Awake()
     {
+        //on instancie le singleton
         if (Instance == null)
         {
             Instance = this;
         }
+        //on le detruit
         else if (Instance != this)
         {
             Destroy(gameObject);
@@ -32,6 +35,7 @@ public class ParamManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //le bird et la difficulté de base
         bird = GreenBird;
         difficulty = Normal;
     }
@@ -42,6 +46,7 @@ public class ParamManager : MonoBehaviour
         
     }
 
+    //getters et setters
     public void SetGreenBird()
     {
         bird = GreenBird;

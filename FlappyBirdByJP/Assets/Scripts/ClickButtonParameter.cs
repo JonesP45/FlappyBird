@@ -7,6 +7,7 @@ public class ClickButtonParameter : MonoBehaviour
 {
     public void onClick()
     {
+        //on charge la scene des paramètres
         SceneManager.LoadScene("Scene1_1-Param");
         ButtonPlayManager.Instance.Remove();
     }

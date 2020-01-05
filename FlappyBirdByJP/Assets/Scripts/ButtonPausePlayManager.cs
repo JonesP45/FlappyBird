@@ -5,24 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class ButtonPausePlayManager : MonoBehaviour
 {
+    //singleton
     public static ButtonPausePlayManager Instance;
 
     void Awake()
     {
+        //instancie le singleton 
         if (Instance == null)
         {
             Instance = this;
         }
-        else if (SceneManager.GetActiveScene().name.Equals("Scene2-Menu"))
-        {
-            Destroy(Instance.gameObject);
-            Instance = this;
-        }
+        //detruit le singleton
         else if (Instance != this)
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
     }
 
     // Start is called before the first frame update
@@ -34,14 +31,12 @@ public class ButtonPausePlayManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().name.Equals("Scene1-Init"))
-        {
-            Destroy(Instance.gameObject);
-        }
+
     }
 
-    public void Hidden()
+    //detruit le singleton quand le bird est mort
+    public void Delete()
     {
-        gameObject.GetComponent<Canvas>().enabled = false;
+        Destroy(gameObject);
     }
 }

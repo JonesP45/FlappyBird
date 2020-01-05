@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//permet de jouer differents sons
 public class SoundAction : MonoBehaviour
 {
     public AudioClip hit;
