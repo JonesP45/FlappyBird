@@ -83,7 +83,7 @@ un bird et une difficulté en même temps.
 1 seul background, etc...).
 - PLEIN de petits bugs et arrangement en tout genre.
 
-## **Test sur Téléphone:**
+### **Test sur Téléphone:**
 
 - Honor View 20
 - Samsung Galaxy A5 2016
