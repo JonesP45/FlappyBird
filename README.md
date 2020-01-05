@@ -4,6 +4,8 @@ Je m'excuse par avance du franglais.
 
 Le code a été commenté dans la mesure du possible.
 
+J'ai suivi quelsques tutos, fait beaucoup de recherches (sur des forums unity par exemples). Il y a peut-être des petits bouts de code venant d'internet mais pas de code provenant de jeux FlappyBird déjà existants, j'ai juste pris quelques idées.
+
 ### **Description de l'application:**
 
 J'ai suivi le TP puis j'ai modifié des éléments qui sont plus conforme au jeu d'origine.
