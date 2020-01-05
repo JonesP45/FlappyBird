@@ -15,7 +15,10 @@ Il y a 5 scènes: les 4 scenes du TP ainsi qu'une scene pour les paramètres acc
 
 _**D'une manière générale:**_
 
-- 
+- Une icone android.
+- Un background lors du chargement de l'application.
+- Un stokage du meilleur score avec PlayerPrefs.
+- La gestion du retour android qui, soit quitte l'application, soit charge la scène initiale.
 
 _**Dans la 1ere scène (Init):**_
 
@@ -31,6 +34,7 @@ le jeu d'origine.
 quand on clique sur le bouton parameter, la scene des paramètre se lance.
 - Un GameObject vide qui est DontDestroyOnLoad et qui gère les paramètres avec le scrip ParamManager, et il contient
 (en children) 3 birds de couleur différentes qui sont caché à l'écran.
+- Un GameObject vide qui est DontDestroyOnLoad et qui permet la gestion du retour android.
 
 **_Dans la scene des paramètre (Param):_**
 
